@@ -8,4 +8,14 @@ subject = "c765c3"
 subject_dir = os.path.normpath(os.path.join("D:/Data/Chantel/UW", subject))
 # subject_dir = os.path.normpath(os.path.join("D:/Data", subject))
 
-x = SEEG.SeegClass(scirun_bin, scirun_net_dir, subject, subject_dir)
+subject_dict = {
+    "subject": subject,
+    "subject_dir": subject_dir,
+    "scirun_bin": scirun_bin,
+    "scirun_net_dir": scirun_net_dir
+
+}
+
+x = SEEG.SeegClass(subject_dict)
+
+x.visualize_leads()
